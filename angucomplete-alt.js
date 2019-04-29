@@ -688,6 +688,9 @@
       };
 
       scope.selectResult = function(result) {
+        if (!result) {
+          return;
+        }
         // Restore original values
         if (scope.matchClass) {
           result.title = extractTitle(result.originalObject);
